@@ -144,7 +144,7 @@ static FRCrashException *instance = nil;
 
 + (void)setCrashExceptionHandler {
     
-    NSSetUncaughtExceptionHandler (&crashExceptionHandler);
+    NSSetUncaughtExceptionHandler(&crashExceptionHandler);
     struct sigaction sigAction;
     sigAction.sa_sigaction = signalHandler;
     sigAction.sa_flags = SA_SIGINFO;
